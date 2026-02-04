@@ -1,214 +1,233 @@
 <!DOCTYPE html>
-
 <html class="light" lang="en"><head>
 <meta charset="utf-8"/>
 <meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;700;900&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
+<title>Sports &amp; Gaming - Luxury Hotel Services</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800&amp;family=Inter:wght@300;400;500;600&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/icon?family=Material+Icons+Outlined" rel="stylesheet"/>
+<script>
         tailwind.config = {
             darkMode: "class",
             theme: {
                 extend: {
                     colors: {
-                        "primary": "#fda114",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#231b0f",
+                        primary: "#fda114",
+                        "background-light": "#ffffff",
+                        "background-dark": "#111827",
                     },
                     fontFamily: {
-                        "display": ["Inter"]
+                        display: ["Montserrat", "sans-serif"],
+                        body: ["Inter", "sans-serif"],
                     },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
+                    borderRadius: {
+                        DEFAULT: "0.5rem",
+                    },
                 },
             },
-        }
+        };
     </script>
 <style>
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
+        body { font-family: 'Inter', sans-serif; }
+        h1, h2, h3, h4 { font-family: 'Montserrat', sans-serif; }
     </style>
-<title>Booking Form Checkout</title>
 </head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#181510] dark:text-[#f8f7f5]">
-<div class="relative flex h-auto min-h-screen w-full flex-col group/design-root overflow-x-hidden">
-<div class="layout-container flex h-full grow flex-col">
-<!-- TopNavBar Component -->
-<div class="w-full flex justify-center bg-white dark:bg-[#1a140b] border-b border-solid border-[#e7e2da] dark:border-[#3d2f1a]">
-<div class="layout-content-container flex flex-col w-full max-w-[1200px]">
-<header class="flex items-center justify-between whitespace-nowrap px-10 py-3">
-<div class="flex items-center gap-4 text-[#181510] dark:text-[#f8f7f5]">
-<div class="size-6 text-primary">
-<span class="material-symbols-outlined text-3xl">apartment</span>
+<body class="bg-background-light dark:bg-background-dark text-slate-800 dark:text-slate-200 transition-colors duration-300">
+<nav class="sticky top-0 z-50 bg-white/80 dark:bg-background-dark/80 backdrop-blur-md border-b border-slate-200 dark:border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex justify-between items-center h-16">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons-outlined text-white text-xl">hotel</span>
 </div>
-<h2 class="text-lg font-bold leading-tight tracking-[-0.015em]">HotelStay</h2>
+<span class="text-xl font-extrabold tracking-tight text-slate-900 dark:text-white">GRAND<span class="text-primary">LUXE</span></span>
 </div>
-<div class="flex flex-1 justify-end gap-8">
-<div class="hidden md:flex items-center gap-9">
-<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Hotels</a>
-<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Resorts</a>
-<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">Offers</a>
-<a class="text-sm font-medium leading-normal hover:text-primary transition-colors" href="#">My Bookings</a>
+<div class="hidden md:flex items-center space-x-8">
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Home</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">Rooms</a>
+<a class="text-sm font-medium text-primary transition-colors" href="#">Services</a>
+<a class="text-sm font-medium hover:text-primary transition-colors" href="#">About</a>
+<button class="bg-primary text-white px-5 py-2 rounded-full font-semibold text-sm hover:bg-orange-600 transition-all shadow-lg shadow-primary/20">Book Now</button>
 </div>
-<button class="flex min-w-[84px] max-w-[480px] cursor-pointer items-center justify-center overflow-hidden rounded-lg h-10 px-4 bg-primary text-white text-sm font-bold leading-normal tracking-[0.015em]">
-<span class="truncate">Log Out</span>
-</button>
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-10 border border-[#e7e2da]" data-alt="User profile avatar placeholder" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuBtIc-oYiCcM-uI4I_pMIJ3NqN_3Yxv-MMaNt89-NaGNXjEEELnYXevQf6ieMhBGNhfSks7izRinfiERWB520EWTPOd6S5Rsk3ji28SbN_ao4-Qcy03e3HU4oJogtMp9oWt7oJO-1-60pWP5XdkJMRZzeEmRlgltlgSZevvjtY_0BsP3wa6i_Xs3RPrI0Dx1Ra6eHr6qLzUYKUE0sqs05c4Dm-3UNNEysZLAj8uErqF77rNRo1ClN1oiM6P90TJOPPF2C9uVZ6V1JI");'></div>
+<div class="md:hidden">
+<span class="material-icons-outlined">menu</span>
+</div>
+</div>
+</div>
+</nav>
+<header class="relative h-[450px] w-full overflow-hidden">
+<img alt="Modern gaming lounge with neon lights and gaming PCs" class="w-full h-full object-cover" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDDQo8QNEYQfIaGceNA8T2RZWib0EjXeFCd0W34DzkjXbLttB8DfCVNBUHNBi1OeAkz-RbD6EIcKyL8jZ2ZPGXhcGIwrPo9AwYPjpDdgF_FjxwtiWyw1lF_tiEPfWYVC8W9E1Xt_Jca2uuzb_BpsdeA9OjLEDJ2IdtGw5tHrV0FU8Yza7Uv6ILRQu-oqIYK-Dci5pezTYogekznaPbAas93lhOlDewnEIT4G6Oipeir82eOevB8VTGKnuqxhf5n2gLvcF2tX1Doop0"/>
+<div class="absolute inset-0 bg-gradient-to-t from-background-dark/90 via-background-dark/40 to-transparent"></div>
+<div class="absolute inset-0 flex flex-col justify-end items-center pb-16 text-center px-4">
+<nav class="flex items-center gap-2 text-white/70 text-sm mb-4">
+<span>Services</span>
+<span class="material-icons-outlined text-xs">chevron_right</span>
+<span class="text-primary font-semibold">Sports &amp; Gaming</span>
+</nav>
+<h1 class="text-4xl md:text-6xl font-extrabold text-white mb-4">Sports &amp; <span class="text-primary">Gaming</span></h1>
+<p class="text-white/80 max-w-2xl text-lg font-light leading-relaxed">Experience the pinnacle of entertainment with our state-of-the-art gaming facilities and professional sports amenities.</p>
 </div>
 </header>
+<main class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+<div class="grid grid-cols-1 lg:grid-cols-3 gap-12">
+<div class="lg:col-span-2 space-y-8">
+<section>
+<div class="flex items-center gap-3 mb-6">
+<div class="w-12 h-12 bg-primary/10 rounded-lg flex items-center justify-center text-primary">
+<span class="material-icons-outlined text-3xl">sports_esports</span>
+</div>
+<h2 class="text-3xl font-bold dark:text-white">Premium Entertainment</h2>
+</div>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed mb-6">
+                        Welcome to our dedicated sports and gaming hub, designed for enthusiasts and casual players alike. Whether you're looking to challenge your friends to a high-stakes poker game, immerse yourself in virtual worlds, or perfect your strike at the bowling alley, our facility offers something for everyone.
+                    </p>
+<p class="text-slate-600 dark:text-slate-400 text-lg leading-relaxed">
+                        Equipped with the latest hardware including RTX-powered PCs, PS5 consoles, and professional-grade billiard tables, we ensure your leisure time is spent in luxury. Our staff is always on hand to help set up equipment or provide refreshments while you play.
+                    </p>
+</section>
+<section class="pt-8">
+<h3 class="text-2xl font-bold mb-8 dark:text-white flex items-center gap-2">
+<span class="w-8 h-[2px] bg-primary"></span>
+                        Featured Activities
+                    </h3>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+<div class="group bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-slate-50 dark:bg-slate-700 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">sports_handball</span>
+</div>
+<h4 class="text-xl font-bold mb-2 dark:text-white">Bowling Alley</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Four professional-grade lanes with automatic scoring and cozy lounge seating.</p>
+</div>
+<div class="group bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-slate-50 dark:bg-slate-700 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">videogame_asset</span>
+</div>
+<h4 class="text-xl font-bold mb-2 dark:text-white">VR Zone</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Immersive 360-degree virtual reality experiences with the latest VR headsets.</p>
+</div>
+<div class="group bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-slate-50 dark:bg-slate-700 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">sports_kabaddi</span>
+</div>
+<h4 class="text-xl font-bold mb-2 dark:text-white">Billiards Room</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Professional felt tables and a classic atmosphere for pool and snooker fans.</p>
+</div>
+<div class="group bg-white dark:bg-slate-800/50 p-6 rounded-2xl border border-slate-100 dark:border-slate-700 hover:border-primary/50 transition-all hover:shadow-xl hover:shadow-primary/5">
+<div class="w-14 h-14 bg-slate-50 dark:bg-slate-700 rounded-xl flex items-center justify-center text-primary mb-4 group-hover:scale-110 transition-transform">
+<span class="material-icons-outlined text-3xl">casino</span>
+</div>
+<h4 class="text-xl font-bold mb-2 dark:text-white">Poker Lounge</h4>
+<p class="text-slate-500 dark:text-slate-400 text-sm">Exclusive tables for card games with dedicated service and luxury seating.</p>
 </div>
 </div>
-<div class="flex flex-1 justify-center py-5">
-<div class="layout-content-container flex flex-col max-w-[1200px] w-full px-6 md:px-10">
-<!-- Breadcrumbs Component -->
-<div class="flex flex-wrap gap-2 py-4">
-<a class="text-[#8d7a5e] text-sm font-medium leading-normal hover:text-primary" href="#">Home</a>
-<span class="text-[#8d7a5e] text-sm font-medium leading-normal">/</span>
-<a class="text-[#8d7a5e] text-sm font-medium leading-normal hover:text-primary" href="#">Search Results</a>
-<span class="text-[#8d7a5e] text-sm font-medium leading-normal">/</span>
-<span class="text-[#181510] dark:text-[#f8f7f5] text-sm font-medium leading-normal">Booking Checkout</span>
+</section>
 </div>
-<!-- ProgressBar Component -->
-<div class="flex flex-col gap-3 py-4">
-<div class="flex gap-6 justify-between">
-<p class="text-[#181510] dark:text-[#f8f7f5] text-base font-medium leading-normal">Step 2: Guest Details</p>
-<p class="text-primary text-sm font-bold leading-normal">66%</p>
+<aside class="space-y-6">
+<div class="bg-slate-50 dark:bg-slate-800/50 p-8 rounded-3xl border border-slate-200 dark:border-slate-700">
+<h3 class="text-xl font-bold mb-6 flex items-center gap-2 dark:text-white">
+<span class="material-icons-outlined text-primary">schedule</span>
+                        Facility Info
+                    </h3>
+<div class="space-y-6">
+<div>
+<p class="text-sm uppercase tracking-wider text-slate-400 font-bold mb-2">Opening Hours</p>
+<div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-slate-700">
+<span class="text-slate-600 dark:text-slate-300">Mon - Thu</span>
+<span class="font-semibold dark:text-white">10:00 - 22:00</span>
 </div>
-<div class="rounded-full bg-[#e7e2da] dark:bg-[#3d2f1a] h-2">
-<div class="h-2 rounded-full bg-primary" style="width: 66%;"></div>
-</div>
-<p class="text-[#8d7a5e] text-xs font-medium uppercase tracking-wider leading-normal">Selection &gt; <span class="text-primary">Details</span> &gt; Payment</p>
-</div>
-<!-- PageHeading Component -->
-<div class="flex flex-wrap justify-between gap-3 py-6">
-<div class="flex min-w-72 flex-col gap-2">
-<p class="text-[#181510] dark:text-[#f8f7f5] text-4xl font-black leading-tight tracking-[-0.033em]">Review &amp; Complete Booking</p>
-<p class="text-[#8d7a5e] text-lg font-normal leading-normal">Please enter your details to finalize the reservation.</p>
+<div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-slate-700">
+<span class="text-slate-600 dark:text-slate-300">Fri - Sun</span>
+<span class="font-semibold dark:text-white">09:00 - 00:00</span>
 </div>
 </div>
-<!-- Form and Summary Layout -->
-<div class="grid grid-cols-1 lg:grid-cols-3 gap-8 mt-4">
-<!-- Left Column: Form -->
-<div class="lg:col-span-2 flex flex-col gap-6">
-<div class="bg-white dark:bg-[#1a140b] rounded-xl p-8 shadow-sm border border-[#e7e2da] dark:border-[#3d2f1a]">
-<h3 class="text-[#181510] dark:text-[#f8f7f5] text-2xl font-bold leading-tight mb-6">Guest Information</h3>
-<form class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-[#181510] dark:text-[#f8f7f5]">Full Name</label>
-<input class="rounded-lg border-[#e7e2da] dark:border-[#3d2f1a] bg-transparent focus:border-primary focus:ring-primary h-12" placeholder="John Doe" type="text"/>
+<div>
+<p class="text-sm uppercase tracking-wider text-slate-400 font-bold mb-2">Pricing</p>
+<div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-slate-700">
+<span class="text-slate-600 dark:text-slate-300">Hourly Pass</span>
+<span class="font-semibold text-primary">$15 / hr</span>
 </div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-[#181510] dark:text-[#f8f7f5]">Email Address</label>
-<input class="rounded-lg border-[#e7e2da] dark:border-[#3d2f1a] bg-transparent focus:border-primary focus:ring-primary h-12" placeholder="john@example.com" type="email"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-[#181510] dark:text-[#f8f7f5]">Phone Number</label>
-<input class="rounded-lg border-[#e7e2da] dark:border-[#3d2f1a] bg-transparent focus:border-primary focus:ring-primary h-12" placeholder="+1 (555) 000-0000" type="tel"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-bold text-[#181510] dark:text-[#f8f7f5]">Arrival Time (Optional)</label>
-<select class="rounded-lg border-[#e7e2da] dark:border-[#3d2f1a] bg-transparent focus:border-primary focus:ring-primary h-12">
-<option>I don't know</option>
-<option>12:00 PM - 2:00 PM</option>
-<option>2:00 PM - 4:00 PM</option>
-<option>4:00 PM - 6:00 PM</option>
-</select>
-</div>
-<div class="md:col-span-2 flex flex-col gap-2">
-<label class="text-sm font-bold text-[#181510] dark:text-[#f8f7f5]">Special Requests</label>
-<textarea class="rounded-lg border-[#e7e2da] dark:border-[#3d2f1a] bg-transparent focus:border-primary focus:ring-primary" placeholder="Extra towels, quiet room, dietary preferences..." rows="4"></textarea>
-</div>
-<div class="md:col-span-2 flex items-start gap-3 pt-4">
-<input class="mt-1 rounded border-[#e7e2da] text-primary focus:ring-primary" id="terms" type="checkbox"/>
-<label class="text-sm text-[#8d7a5e]" for="terms">
-                                            I agree to the <a class="text-primary font-medium" href="#">Terms of Service</a> and <a class="text-primary font-medium" href="#">Privacy Policy</a>.
-                                        </label>
-</div>
-</form>
+<div class="flex justify-between items-center py-2 border-b border-slate-200 dark:border-slate-700">
+<span class="text-slate-600 dark:text-slate-300">Day Access</span>
+<span class="font-semibold text-primary">$45 / day</span>
 </div>
 </div>
-<!-- Right Column: Booking Summary Card -->
-<div class="lg:col-span-1">
-<div class="bg-white dark:bg-[#1a140b] rounded-xl shadow-sm border border-[#e7e2da] dark:border-[#3d2f1a] sticky top-8">
-<div class="p-6 border-b border-[#e7e2da] dark:border-[#3d2f1a]">
-<h3 class="text-xl font-bold">Booking Summary</h3>
-</div>
-<div class="p-6 space-y-4">
-<div class="flex items-start gap-4 pb-4 border-b border-[#e7e2da] dark:border-[#3d2f1a]">
-<div class="w-24 h-20 rounded-lg bg-cover bg-center shrink-0" data-alt="Luxury hotel room interior with king bed" style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuA0zvAaK0JYygu91pV1o27-swNBvHZNDs6O8VA3sX2Flo_H0cRr7NuKyJREGUQOKFqLEs4M4mN_ADM4gEJrTzly6AZfiJMFLVg2e9ZlsOA0HtMezvnU-Vwvf0xYBFHA8rVfmInMTXGzfbiqih4Tkhg2jpcJsqvIOnVYh12FfAbhRVxLkAMwYcH4xNK7Wlivl3WXF6ED8BybBW49H7wzB1neg-IpgWtPdgIvRrmY2Vu5uAcgepl-ZJD34HkNwk3XFNcfhyAwrEbTaTU');"></div>
-<div class="flex flex-col">
-<span class="text-sm font-bold">Grand Deluxe Sea View</span>
-<span class="text-xs text-[#8d7a5e]">The Grand Palace Resort</span>
-<div class="flex items-center gap-1 mt-1">
-<span class="material-symbols-outlined text-primary text-sm">star</span>
-<span class="text-xs font-bold">4.9</span>
+<div class="pt-4">
+<button class="w-full bg-primary text-white py-4 rounded-xl font-bold text-lg hover:bg-orange-600 transition-all shadow-xl shadow-primary/30 flex items-center justify-center gap-2">
+<span class="material-icons-outlined">confirmation_number</span>
+                                BOOK SESSION
+                            </button>
+<p class="text-center text-xs text-slate-400 mt-4 italic">* Hotel guests receive 20% discount on all bookings</p>
 </div>
 </div>
 </div>
-<div class="space-y-3 pt-2">
-<div class="flex justify-between items-center text-sm">
-<span class="text-[#8d7a5e] flex items-center gap-2">
-<span class="material-symbols-outlined text-base">calendar_month</span> Dates
-                                            </span>
-<span class="font-medium">Oct 12 - Oct 15</span>
+<div class="bg-primary p-8 rounded-3xl text-white relative overflow-hidden group">
+<div class="relative z-10">
+<h4 class="text-xl font-bold mb-2">Need Help?</h4>
+<p class="text-white/80 text-sm mb-6">Contact our concierge for private events or group bookings.</p>
+<a class="flex items-center gap-3 font-semibold group-hover:translate-x-2 transition-transform" href="tel:+123456789">
+<span class="material-icons-outlined">call</span>
+                            +1 (234) 567-890
+                        </a>
 </div>
-<div class="flex justify-between items-center text-sm">
-<span class="text-[#8d7a5e] flex items-center gap-2">
-<span class="material-symbols-outlined text-base">nights_stay</span> Stay duration
-                                            </span>
-<span class="font-medium">3 Nights</span>
+<div class="absolute -right-12 -bottom-12 w-40 h-40 bg-white/10 rounded-full blur-2xl group-hover:scale-125 transition-transform duration-700"></div>
 </div>
-<div class="flex justify-between items-center text-sm">
-<span class="text-[#8d7a5e] flex items-center gap-2">
-<span class="material-symbols-outlined text-base">person</span> Guests
-                                            </span>
-<span class="font-medium">2 Adults</span>
+</aside>
 </div>
+</main>
+<section class="bg-slate-50 dark:bg-slate-900/50 py-16">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="text-center mb-12">
+<span class="text-primary font-bold uppercase tracking-widest text-sm mb-2 block">Our Environment</span>
+<h2 class="text-3xl font-extrabold dark:text-white">View the Space</h2>
 </div>
-<div class="pt-4 border-t border-[#e7e2da] dark:border-[#3d2f1a] space-y-2">
-<div class="flex justify-between text-sm">
-<span class="text-[#8d7a5e]">$250.00 x 3 nights</span>
-<span>$750.00</span>
+<div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+<div class="aspect-square overflow-hidden rounded-2xl">
+<img alt="Esports arena" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDQm-XL3pSSESWThgm1-5cTylF5OcfGrFQ-ipcUMs0bFOLLUu1SHY_eP5rRVAd2KDDPwzzE97teN2XoNdijkpF314jhJU-1oMeO37cK0tcz2jpevSTSHeOxr9r4_1FGU_I0C1aJNZSiEIh-5KH-upeYDVFX2bw8XbYL5Cjx-exrHEf2MfbEhRhA3eAV6fE7lFKIbdyM_k6cQ0RczewPzZCOKXgOMnqNh_Thj9NKn4ng2hX16XRIrQl0FNNd2IBpnUNa_prcw1j7qzc"/>
 </div>
-<div class="flex justify-between text-sm">
-<span class="text-[#8d7a5e]">Service fee</span>
-<span>$45.00</span>
+<div class="aspect-square overflow-hidden rounded-2xl">
+<img alt="Billiard table detail" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uNsyRxDH8B2GNkcappDm2sXsF1-LNYu2TWF0W0h5Vk7kZnQTLi8J3hkqSgl_SFx0r0l5YKroTu6GwOuAZT9GKbIAMI_-4IMS6uT7MmCi4W9nNXq8eY04ScXPN5gOC1mzyKssJFFPTmXBWbZtKptKx4M5sxOtQhktcTtLUUxPOM8EV2rFcwEEeykQPNqosTRlPjOuLSkgPRh_B55v_8t_hVzQsIGnjE8b5KGrl_PI9UCQyGwg0u37uqUxMeMhTEz1OxKRRlmc_A8"/>
 </div>
-<div class="flex justify-between text-sm">
-<span class="text-[#8d7a5e]">Occupancy taxes</span>
-<span>$28.50</span>
+<div class="aspect-square overflow-hidden rounded-2xl">
+<img alt="Bowling alley neon lights" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB1lhu7FuSOWdk49awS13zKBxuFQ8AFS_eF7QX10X6C2u0rBsBtcFLcCHt04iZ8zZq56Zv1lhZmnLq9mBuntnug3blpD8mcPvJ-nKOVmZFIANuMfsS8yYTE7r3mYiwlahuBI5AacQDVSRpf5QnS-XgZxdORmE2ZP_ArgD6ontdZ2VAeO7jJocm1dRfAm8_P1dXwbhSL0D6fXqua0ENrgP_g3wU0WlxRqjf9PxczgSxAITCfAqyuPtgSCrQOsN8Ek0-nPACrp7DbasM"/>
 </div>
-<div class="flex justify-between items-center pt-4">
-<span class="text-lg font-bold">Total (USD)</span>
-<span class="text-2xl font-black text-primary">$823.50</span>
+<div class="aspect-square overflow-hidden rounded-2xl">
+<img alt="VR headset and controllers" class="w-full h-full object-cover hover:scale-110 transition-transform duration-500" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBAIzfzdbvefjHEkbhyYIN9z1iwzNJbgAECLfeDXpco-DaH_n8Jlbm5K2vAvBcXcVx2A0T7rOUbhHj3dN3mRaqrg5uNpUC656xEXxo3Tdq_Ktvl-xnobnGFiBSINllIVWNktm-txXrQdK9cMdrapw6RXxVN0IFrCWE51ZYx2gs5z5whzgo0c6J_mc4fjw82zRPlQCfyTLZcEDooWLReCE6ZKFizX0wZK58nWkhin5i-VToAcNsQqrXaY19uC36iPHbuwy7s_e_dXFk"/>
 </div>
 </div>
-<button class="w-full bg-primary hover:bg-opacity-90 text-white font-bold py-4 rounded-xl mt-6 transition-all flex items-center justify-center gap-2 shadow-lg shadow-primary/20">
-<span>Complete Booking</span>
-<span class="material-symbols-outlined">arrow_forward</span>
+</div>
+</section>
+<footer class="bg-slate-900 text-slate-400 py-12 border-t border-slate-800">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+<div class="flex flex-col md:flex-row justify-between items-center gap-8">
+<div class="flex items-center gap-2">
+<div class="w-8 h-8 bg-primary rounded flex items-center justify-center">
+<span class="material-icons-outlined text-white text-xl">hotel</span>
+</div>
+<span class="text-xl font-extrabold tracking-tight text-white">GRAND<span class="text-primary">LUXE</span></span>
+</div>
+<div class="flex gap-8 text-sm font-medium">
+<a class="hover:text-white transition-colors" href="#">Privacy Policy</a>
+<a class="hover:text-white transition-colors" href="#">Terms of Service</a>
+<a class="hover:text-white transition-colors" href="#">Contact</a>
+</div>
+<div class="flex gap-4">
+<button class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-outlined text-lg">public</span>
 </button>
-<p class="text-center text-[10px] text-[#8d7a5e] mt-4 uppercase tracking-widest font-bold">
-<span class="material-symbols-outlined text-xs align-middle">lock</span> Secure Checkout
-                                    </p>
+<button class="w-10 h-10 rounded-full bg-slate-800 flex items-center justify-center hover:bg-primary hover:text-white transition-all">
+<span class="material-icons-outlined text-lg">alternate_email</span>
+</button>
 </div>
 </div>
+<div class="mt-8 pt-8 border-t border-slate-800 text-center text-xs">
+                © 2024 GrandLuxe Resort &amp; Spa. All rights reserved.
+            </div>
 </div>
-</div>
-<footer class="mt-20 py-10 border-t border-[#e7e2da] dark:border-[#3d2f1a] flex flex-col items-center gap-4">
-<div class="flex gap-6 text-[#8d7a5e] text-sm">
-<a class="hover:text-primary" href="#">Help Center</a>
-<a class="hover:text-primary" href="#">Cancellation Policy</a>
-<a class="hover:text-primary" href="#">Refund Policy</a>
-</div>
-<p class="text-[#8d7a5e] text-xs">© 2023 HotelStay Inc. All rights reserved.</p>
 </footer>
-</div>
-</div>
-</div>
-</div>
+<button class="fixed bottom-6 right-6 w-12 h-12 bg-slate-900 dark:bg-white text-white dark:text-slate-900 rounded-full flex items-center justify-center shadow-2xl z-50" onclick="document.documentElement.classList.toggle('dark')">
+<span class="material-icons-outlined">dark_mode</span>
+</button>
+
 </body></html>
