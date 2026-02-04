@@ -1,229 +1,218 @@
-<!DOCTYPE html>
-<html class="light" lang="en"><head>
-<meta charset="utf-8"/>
-<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
-<title>Admin System Settings - Hotel Management</title>
-<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
-<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
-<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
-<script id="tailwind-config">
-        tailwind.config = {
-            darkMode: "class",
-            theme: {
-                extend: {
-                    colors: {
-                        "primary": "#fda114",
-                        "background-light": "#f8f7f5",
-                        "background-dark": "#221910",
+<!doctype html>
+<html class="light" lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+        <title>Hotel Management Registration</title>
+        <script src="https://cdn.tailwindcss.com?plugins=forms,typography"></script>
+        <link
+            href="https://fonts.googleapis.com/css2?family=Heebo:wght@400;500;600;700&amp;family=Montserrat:wght@400;500;600;700&amp;display=swap"
+            rel="stylesheet"
+        />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@24,400,0,0"
+            rel="stylesheet"
+        />
+        <script>
+            tailwind.config = {
+                darkMode: 'class',
+                theme: {
+                    extend: {
+                        colors: {
+                            primary: '#FEA116',
+                            'background-light': '#F1F8FF',
+                            'background-dark': '#0F172B',
+                            'dark-grey': '#666567',
+                            'deep-navy': '#0F172B',
+                        },
+                        fontFamily: {
+                            display: ['Montserrat', 'sans-serif'],
+                            sans: ['Heebo', 'sans-serif'],
+                        },
+                        borderRadius: {
+                            DEFAULT: '4px',
+                        },
                     },
-                    fontFamily: {
-                        "display": ["Inter", "sans-serif"]
-                    },
-                    borderRadius: {"DEFAULT": "0.25rem", "lg": "0.5rem", "xl": "0.75rem", "full": "9999px"},
                 },
-            },
-        }
-    </script>
-<style type="text/tailwindcss">
-        .material-symbols-outlined {
-            font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
-        }
-        body {
-            font-family: 'Inter', sans-serif;
-        }
-        .toggle-switch:checked {
-            background-color: #fda114 !important;
-            border-color: #fda114 !important;
-        }
-    </style>
-</head>
-<body class="bg-background-light dark:bg-background-dark font-display text-[#181411] dark:text-[#f8f7f5] transition-colors duration-200">
-<div class="flex h-screen overflow-hidden">
-<aside class="w-64 flex-shrink-0 bg-white dark:bg-[#2d2218] border-r border-[#e6e0db] dark:border-[#3d3024] flex flex-col justify-between p-4 h-full">
-<div class="flex flex-col gap-6">
-<div class="flex gap-3 items-center px-2 py-4">
-<div class="bg-center bg-no-repeat aspect-square bg-cover rounded-full size-12 border-2 border-primary" data-alt="Close up portrait of a professional male hotel administrator" style='background-image: url("https://lh3.googleusercontent.com/aida-public/AB6AXuCtR0Dc-AUE7Zh7TgAC5F8en_P8Gtf8C14TLp4ubkl-RXF2D5-6Cxl5EFj2hu6eTTjc-BLxRX8aXtXUUDnRuY1A0AGfg_kvBFD8OGMHOiISbFY6nNRVUA9yCeJaObUnkfMOrONi-WbPKX4nvDmU3RF68MKxxb5zARCJDcmkOcGruWNhcFu1O3iSmWS-yR68cl2QZYfypm9krpTvDMcVAuqmAMVeXbVt93nCDGrv_aj19nDHS0AKhDctSmA_dO5NPtx7KOIR1NjR8bI");'></div>
-<div class="flex flex-col">
-<h1 class="text-[#181411] dark:text-white text-base font-bold leading-tight">Hotel Admin</h1>
-<p class="text-[#8a7560] dark:text-[#c0a894] text-xs font-medium">Super Admin</p>
-</div>
-</div>
-<nav class="flex flex-col gap-1">
-<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f5f2f0] dark:hover:bg-[#3d3024] text-[#181411] dark:text-[#f8f7f5] cursor-pointer group transition-colors">
-<span class="material-symbols-outlined group-hover:text-primary">dashboard</span>
-<p class="text-sm font-medium">Overview</p>
-</div>
-<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f5f2f0] dark:hover:bg-[#3d3024] text-[#181411] dark:text-[#f8f7f5] cursor-pointer group transition-colors">
-<span class="material-symbols-outlined group-hover:text-primary">group</span>
-<p class="text-sm font-medium">Users</p>
-</div>
-<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f5f2f0] dark:hover:bg-[#3d3024] text-[#181411] dark:text-[#f8f7f5] cursor-pointer group transition-colors">
-<span class="material-symbols-outlined group-hover:text-primary">bed</span>
-<p class="text-sm font-medium">Rooms</p>
-</div>
-<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f5f2f0] dark:hover:bg-[#3d3024] text-[#181411] dark:text-[#f8f7f5] cursor-pointer group transition-colors">
-<span class="material-symbols-outlined group-hover:text-primary">room_service</span>
-<p class="text-sm font-medium">Services</p>
-</div>
-<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-[#f5f2f0] dark:hover:bg-[#3d3024] text-[#181411] dark:text-[#f8f7f5] cursor-pointer group transition-colors">
-<span class="material-symbols-outlined group-hover:text-primary">bar_chart</span>
-<p class="text-sm font-medium">Reports</p>
-</div>
-<div class="mt-4 pt-4 border-t border-[#f5f2f0] dark:border-[#3d3024]">
-<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg bg-primary text-white cursor-pointer">
-<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">settings</span>
-<p class="text-sm font-semibold">Settings</p>
-</div>
-</div>
-</nav>
-</div>
-<div class="flex flex-col gap-1">
-<div class="flex items-center gap-3 px-3 py-2.5 rounded-lg hover:bg-red-50 text-red-600 cursor-pointer transition-colors">
-<span class="material-symbols-outlined">logout</span>
-<p class="text-sm font-semibold">Logout</p>
-</div>
-</div>
-</aside>
-<main class="flex-1 flex flex-col overflow-y-auto">
-<header class="sticky top-0 z-10 flex items-center justify-between whitespace-nowrap border-b border-[#e6e0db] dark:border-[#3d3024] bg-white/80 dark:bg-[#221910]/80 backdrop-blur-md px-8 py-3 h-16">
-<div class="flex items-center gap-8">
-<div class="flex items-center gap-4 text-[#181411] dark:text-white">
-<div class="size-6 text-primary">
-<svg fill="currentColor" viewBox="0 0 48 48" xmlns="http://www.w3.org/2000/svg">
-<path d="M44 4H30.6666V17.3334H17.3334V30.6666H4V44H44V4Z"></path>
-</svg>
-</div>
-<h2 class="text-lg font-bold leading-tight tracking-tight">System Settings</h2>
-</div>
-</div>
-<div class="flex items-center gap-3">
-<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#f5f2f0] dark:bg-[#3d3024] text-[#181411] dark:text-white hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined">notifications</span>
-</button>
-<button class="flex items-center justify-center rounded-lg h-10 w-10 bg-[#f5f2f0] dark:bg-[#3d3024] text-[#181411] dark:text-white hover:bg-primary/20 transition-colors">
-<span class="material-symbols-outlined">account_circle</span>
-</button>
-</div>
-</header>
-<div class="p-8 max-w-5xl mx-auto w-full flex flex-col gap-8">
-<section class="bg-white dark:bg-[#2d2218] border border-[#e6e0db] dark:border-[#3d3024] rounded-xl overflow-hidden shadow-sm">
-<div class="p-6 border-b border-[#e6e0db] dark:border-[#3d3024]">
-<h3 class="text-lg font-bold dark:text-white">General Settings</h3>
-<p class="text-sm text-[#8a7560] dark:text-[#c0a894]">Manage your hotel's basic information and branding.</p>
-</div>
-<div class="p-6 flex flex-col gap-6">
-<div class="grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Hotel Name</label>
-<input class="w-full h-11 bg-background-light dark:bg-[#3d3024] border-[#e6e0db] dark:border-[#4d4034] rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary dark:text-white" type="text" value="Grand Horizon Resort &amp; Spa"/>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Official Email</label>
-<input class="w-full h-11 bg-background-light dark:bg-[#3d3024] border-[#e6e0db] dark:border-[#4d4034] rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary dark:text-white" type="email" value="contact@grandhorizon.com"/>
-</div>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Hotel Address</label>
-<textarea class="w-full bg-background-light dark:bg-[#3d3024] border-[#e6e0db] dark:border-[#4d4034] rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary dark:text-white" rows="3">123 Luxury Coastal Way, Miami Beach, FL 33139, United States</textarea>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Hotel Logo</label>
-<div class="flex items-center gap-4 mt-1">
-<div class="size-20 rounded-lg border-2 border-dashed border-[#e6e0db] dark:border-[#3d3024] flex items-center justify-center bg-background-light dark:bg-[#3d3024]">
-<span class="material-symbols-outlined text-[#8a7560]">add_a_photo</span>
-</div>
-<div class="flex flex-col gap-2">
-<button class="px-4 py-2 bg-white dark:bg-[#3d3024] border border-[#e6e0db] dark:border-[#4d4034] text-xs font-bold rounded-lg hover:bg-gray-50 dark:hover:bg-[#4d4034] transition-all">Upload New Logo</button>
-<p class="text-[11px] text-[#8a7560]">Recommended size: 512x512px. PNG or SVG.</p>
-</div>
-</div>
-</div>
-</div>
-<div class="bg-[#fcfbf9] dark:bg-[#352a20] px-6 py-4 flex justify-end">
-<button class="px-6 py-2 bg-primary text-white font-bold rounded-lg text-sm shadow-md shadow-primary/30 hover:brightness-110 transition-all">Save Changes</button>
-</div>
-</section>
-<section class="bg-white dark:bg-[#2d2218] border border-[#e6e0db] dark:border-[#3d3024] rounded-xl overflow-hidden shadow-sm">
-<div class="p-6 border-b border-[#e6e0db] dark:border-[#3d3024]">
-<h3 class="text-lg font-bold dark:text-white">System Configuration</h3>
-<p class="text-sm text-[#8a7560] dark:text-[#c0a894]">Set up regional and operational preferences.</p>
-</div>
-<div class="p-6 grid grid-cols-1 md:grid-cols-2 gap-6">
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Default Currency</label>
-<select class="w-full h-11 bg-background-light dark:bg-[#3d3024] border-[#e6e0db] dark:border-[#4d4034] rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary dark:text-white">
-<option>USD ($) - US Dollar</option>
-<option>EUR (€) - Euro</option>
-<option>GBP (£) - British Pound</option>
-<option>JPY (¥) - Japanese Yen</option>
-</select>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Timezone</label>
-<select class="w-full h-11 bg-background-light dark:bg-[#3d3024] border-[#e6e0db] dark:border-[#4d4034] rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary dark:text-white">
-<option>(GMT-05:00) Eastern Time (US &amp; Canada)</option>
-<option>(GMT+00:00) UTC</option>
-<option>(GMT+01:00) Central European Time</option>
-</select>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Date Format</label>
-<select class="w-full h-11 bg-background-light dark:bg-[#3d3024] border-[#e6e0db] dark:border-[#4d4034] rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary dark:text-white">
-<option>MM/DD/YYYY</option>
-<option>DD/MM/YYYY</option>
-<option>YYYY-MM-DD</option>
-</select>
-</div>
-<div class="flex flex-col gap-2">
-<label class="text-sm font-semibold text-[#181411] dark:text-white">Automatic Logout</label>
-<select class="w-full h-11 bg-background-light dark:bg-[#3d3024] border-[#e6e0db] dark:border-[#4d4034] rounded-lg text-sm focus:ring-2 focus:ring-primary focus:border-primary dark:text-white">
-<option>After 30 minutes of inactivity</option>
-<option>After 1 hour of inactivity</option>
-<option>Never</option>
-</select>
-</div>
-</div>
-<div class="bg-[#fcfbf9] dark:bg-[#352a20] px-6 py-4 flex justify-end">
-<button class="px-6 py-2 bg-primary text-white font-bold rounded-lg text-sm shadow-md shadow-primary/30 hover:brightness-110 transition-all">Save Changes</button>
-</div>
-</section>
-<section class="bg-white dark:bg-[#2d2218] border border-[#e6e0db] dark:border-[#3d3024] rounded-xl overflow-hidden shadow-sm">
-<div class="p-6 border-b border-[#e6e0db] dark:border-[#3d3024]">
-<h3 class="text-lg font-bold dark:text-white">Notification Settings</h3>
-<p class="text-sm text-[#8a7560] dark:text-[#c0a894]">Configure how you want to be alerted for system events.</p>
-</div>
-<div class="p-6 flex flex-col gap-4">
-<div class="flex items-center justify-between py-2">
-<div class="flex flex-col">
-<p class="text-sm font-semibold dark:text-white">Email Notifications</p>
-<p class="text-xs text-[#8a7560] dark:text-[#c0a894]">Receive daily summary reports via email.</p>
-</div>
-<input checked="" class="toggle-switch h-6 w-11 rounded-full appearance-none bg-gray-300 dark:bg-[#4d4034] relative cursor-pointer before:content-[''] before:absolute before:h-4 before:w-4 before:bg-white before:rounded-full before:top-1 before:left-1 checked:before:translate-x-5 transition-all outline-none focus:ring-0" type="checkbox"/>
-</div>
-<div class="flex items-center justify-between py-2 border-t border-[#f5f2f0] dark:border-[#3d3024]">
-<div class="flex flex-col">
-<p class="text-sm font-semibold dark:text-white">Push Notifications</p>
-<p class="text-xs text-[#8a7560] dark:text-[#c0a894]">Alerts for new bookings and immediate actions.</p>
-</div>
-<input checked="" class="toggle-switch h-6 w-11 rounded-full appearance-none bg-gray-300 dark:bg-[#4d4034] relative cursor-pointer before:content-[''] before:absolute before:h-4 before:w-4 before:bg-white before:rounded-full before:top-1 before:left-1 checked:before:translate-x-5 transition-all outline-none focus:ring-0" type="checkbox"/>
-</div>
-<div class="flex items-center justify-between py-2 border-t border-[#f5f2f0] dark:border-[#3d3024]">
-<div class="flex flex-col">
-<p class="text-sm font-semibold dark:text-white">SMS Alerts</p>
-<p class="text-xs text-[#8a7560] dark:text-[#c0a894]">Critical system failures and emergency broadcasts.</p>
-</div>
-<input class="toggle-switch h-6 w-11 rounded-full appearance-none bg-gray-300 dark:bg-[#4d4034] relative cursor-pointer before:content-[''] before:absolute before:h-4 before:w-4 before:bg-white before:rounded-full before:top-1 before:left-1 checked:before:translate-x-5 transition-all outline-none focus:ring-0" type="checkbox"/>
-</div>
-</div>
-<div class="bg-[#fcfbf9] dark:bg-[#352a20] px-6 py-4 flex justify-end">
-<button class="px-6 py-2 bg-primary text-white font-bold rounded-lg text-sm shadow-md shadow-primary/30 hover:brightness-110 transition-all">Save Changes</button>
-</div>
-</section>
-</div>
-<footer class="mt-auto px-8 py-6 border-t border-[#e6e0db] dark:border-[#3d3024] text-center">
-<p class="text-xs text-[#8a7560] dark:text-[#c0a894] font-medium">© 2024 Hotel Management System v1.0.4 - All Rights Reserved</p>
-</footer>
-</main>
-</div>
-
-</body></html>
+            }
+        </script>
+        <style>
+            body {
+                font-family: 'Heebo', sans-serif;
+            }
+            h1,
+            h2,
+            h3 {
+                font-family: 'Montserrat', sans-serif;
+            }
+        </style>
+    </head>
+    <body
+        class="bg-background-light dark:bg-background-dark min-h-screen flex items-center justify-center p-4 transition-colors duration-300"
+    >
+        <button
+            class="fixed top-6 right-6 p-2 rounded-full bg-white dark:bg-deep-navy shadow-lg text-deep-navy dark:text-white border border-gray-200 dark:border-gray-700"
+            onclick="document.documentElement.classList.toggle('dark')"
+        >
+            <span class="material-symbols-outlined block dark:hidden"
+                >dark_mode</span
+            >
+            <span class="material-symbols-outlined hidden dark:block"
+                >light_mode</span
+            >
+        </button>
+        <div class="w-full max-w-md">
+            <div class="text-center mb-8">
+                <div class="flex items-center justify-center gap-2 mb-2">
+                    <div class="h-[1px] w-12 bg-primary"></div>
+                    <span
+                        class="text-primary font-bold tracking-widest uppercase text-sm"
+                        >Our Management</span
+                    >
+                    <div class="h-[1px] w-12 bg-primary"></div>
+                </div>
+                <h1
+                    class="text-3xl md:text-4xl font-extrabold text-deep-navy dark:text-white uppercase tracking-tight"
+                >
+                    Join <span class="text-primary">US</span>
+                </h1>
+            </div>
+            <div
+                class="bg-white dark:bg-deep-navy p-8 md:p-10 rounded-lg shadow-2xl border border-gray-100 dark:border-gray-800"
+            >
+                <h2
+                    class="text-xl font-bold text-deep-navy dark:text-white mb-6 text-center"
+                >
+                    Create New Account
+                </h2>
+                <form action="#" class="space-y-5">
+                    <div>
+                        <label
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            for="name"
+                            >Full Name</label
+                        >
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"
+                                >person</span
+                            >
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                                id="name"
+                                name="name"
+                                placeholder="John Doe"
+                                type="text"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            for="email"
+                            >Email Address</label
+                        >
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"
+                                >mail</span
+                            >
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                                id="email"
+                                name="email"
+                                placeholder="example@hotel.com"
+                                type="email"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            for="phone"
+                            >Phone Number</label
+                        >
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"
+                                >call</span
+                            >
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                                id="phone"
+                                name="phone"
+                                placeholder="+1 (555) 000-0000"
+                                type="tel"
+                            />
+                        </div>
+                    </div>
+                    <div>
+                        <label
+                            class="block text-sm font-medium text-gray-700 dark:text-gray-300 mb-1"
+                            for="password"
+                            >Password</label
+                        >
+                        <div class="relative">
+                            <span
+                                class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-gray-400 text-lg"
+                                >lock</span
+                            >
+                            <input
+                                class="w-full pl-10 pr-4 py-3 bg-white dark:bg-gray-800 border border-gray-200 dark:border-gray-700 rounded text-gray-900 dark:text-white focus:ring-2 focus:ring-primary focus:border-primary outline-none transition-all placeholder:text-gray-400 dark:placeholder:text-gray-500"
+                                id="password"
+                                name="password"
+                                placeholder="••••••••"
+                                type="password"
+                            />
+                        </div>
+                    </div>
+                    <div class="flex items-center gap-2 py-1">
+                        <input
+                            class="w-4 h-4 rounded border-gray-300 dark:border-gray-700 text-primary focus:ring-primary cursor-pointer"
+                            id="terms"
+                            type="checkbox"
+                        />
+                        <label
+                            class="text-xs text-gray-600 dark:text-gray-400"
+                            for="terms"
+                            >I agree to the
+                            <a class="text-primary hover:underline" href="#"
+                                >Terms of Service</a
+                            >
+                            and
+                            <a class="text-primary hover:underline" href="#"
+                                >Privacy Policy</a
+                            ></label
+                        >
+                    </div>
+                    <button
+                        class="w-full bg-primary hover:bg-orange-600 text-white font-bold py-3.5 px-4 rounded shadow-lg transition-colors duration-200 flex items-center justify-center gap-2 uppercase tracking-wider text-sm"
+                        type="submit"
+                    >
+                        Register Now
+                        <span class="material-symbols-outlined text-lg"
+                            >arrow_forward</span
+                        >
+                    </button>
+                </form>
+                <div
+                    class="mt-8 text-center border-t border-gray-100 dark:border-gray-800 pt-6"
+                >
+                    <p class="text-sm text-gray-600 dark:text-gray-400">
+                        Already have an account?
+                        <a
+                            class="text-primary font-bold hover:underline ml-1"
+                            href="#"
+                            >Login here</a
+                        >
+                    </p>
+                </div>
+            </div>
+            <p
+                class="mt-8 text-center text-xs text-gray-500 dark:text-gray-500 uppercase tracking-widest font-medium"
+            >
+                © 2024 Hotel Management System. Professional Service.
+            </p>
+        </div>
+    </body>
+</html>
